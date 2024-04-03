@@ -58,9 +58,9 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
   text-align: left;
-  background-color: #fff;
+  color: #D9E6F3;
+  background-color: #191919;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -74,13 +74,17 @@ hr {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 
 p {
-  margin-top: 0;
+  margin-top: 1rem;
   margin-bottom: 1rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 
 abbr[title],
@@ -389,7 +393,7 @@ template {
 .name {
     color: white; /* Sets the text color to silver */
     font-weight: bold; /* Makes the text bold */
-    font-size: 2em; /* Adjust size as necessary */
+    font-size: 2.5em; /* Adjust size as necessary */
     margin-bottom: 5px; /* Adds space between the text and the profile picture */
 }
 
@@ -403,6 +407,15 @@ template {
     display: block;
     margin: 10px auto 0;
 	width: calc(20vw + 1vh);
+}
+
+.welcome-footer{
+	background-color: #312C2C;
+	border: 2px solid #312C2C;
+	box-shadow: 10px 10px 10px 10px rgba(0,0,0,1);
+	padding-left: 10vw;
+	padding-right: 10vw;
+	font-size: 1vw;
 }
 
 /* /s> */
@@ -526,7 +539,7 @@ mark,
 
 .img-fluid {
   max-width: 100%;
-  height: auto;
+  height: 25vh;
 }
 
 .img-thumbnail {
