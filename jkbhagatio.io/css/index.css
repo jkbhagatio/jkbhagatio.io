@@ -382,7 +382,7 @@ template {
 
 .centered-content {
     position: absolute;
-    top: 35%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, 0);
 	text-align: center;
