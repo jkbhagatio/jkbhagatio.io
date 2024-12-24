@@ -42,7 +42,7 @@
 }
 
 html {
-  font-family: "Consolas";
+  font-family: "Georgia";
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -54,7 +54,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Consolas", monospace;
+  font-family: "Georgia";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -363,7 +363,7 @@ template {
 .hero {
     position: relative;
     text-align: center;
-	background: url("../assets/devloper_io_domain_joke.png") center center;
+	background: url("../assets/latham_brain_in_out.jpg") center center;
     background-attachment: fixed;
 	background-position: center;
     background-size: cover;
