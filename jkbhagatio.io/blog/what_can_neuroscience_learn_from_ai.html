@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>Jai Bhagat's Personal Website</title>
+	<link rel="icon" href="../assets/J_favicon.ico" type="image/x-icon">
+	<link href="../css/index.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		  <a class="navbar-brand" href="#"></a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		  </button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			  <ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+				  <a class="nav-link" href="index.html">Home</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="assets/jai_bhagat_cv_2024.pdf" target="_blank">C.V.</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="neuronauts.html">Neuronauts</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="side-projects.html">Side-Projects</a>
+				</li>
+				<li class="nav-item active">
+				  <a class="nav-link" href="blog.html">Blog</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="hobbies.html">Hobbies</a>
+				</li>
+			  </ul>
+			  <form class="form-inline my-2 my-lg-0" action="https://www.google.com/search" method="get">
+				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q">
+				<input type="hidden" name="sitesearch" value="jkbhagatio.io">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			  </form>
+			</div>
+		</nav>
+        <style>
+            ul {
+                padding-left: 100px; /* Adds indentation */
+                margin: 0; /* Removes default browser margins if necessary */
+            }
+            ol {
+                padding-left: 100px; /* Adds indentation */
+                margin: 0; /* Removes default browser margins if necessary */
+            }
+            li {
+                line-height: 1.5; /* Improves readability */
+            }
+            .text-left {
+                text-align: left; /* Ensures text alignment */
+            }
+        </style>
+		<h1 class="text-left" style="color: #AEF6FF">What can neuroscience learn from AI?<br> Mechanistic interpretability for neural interpretability. </h1>
+        <p class="text-left">
+        <em>Jai Bhagat -- December 2024 &nbsp; (Draft)</em>
+        </p>
+        <p class="text-left"><br>
+        The history of AI is intertwined with neuroscience. Artificial neural networks 
+        (ANNs), which serve as the foundations of ubiquitious contemporary generative AI systems
+        like ChatGPT and Midjourney, were inspired by biological neuronal networks, hence their
+        namesake. Over time, however, neuroscience's influence on AI has diminished, as progress 
+        in AI has advanced mainly as a result of:
+        </p>
+        <ol class="text-left">
+        <li>
+        Theoretical concepts that have little to do with how biological neural computation is 
+        performed (e.g. the transformer architecture)</li> 
+        <li>
+        Scaling of compute and data (i.e. making ANNs bigger and training them for longer on 
+        more data) giving rise to increasingly intelligent behavior.
+        </li>
+        </ol>
+        <p class="text-left">
+        Many in the field of neuroAI still believe in the potential of neuroscience to influence AI;
+        neuromorphic hardware is one area where this could happen, especially when considering
+        that the human brain uses less than 5% of the power consumed by a contemporary high-end 
+        consumer-grade GPU. This post, however, will not focus on how neuroscience may still be 
+        able to influence AI, but rather the reverse: how AI can influence neuroscience.
+        </p>
+        <h2 class="text-left" style="color: #AEF6FF">A brief history of AI tools for systems neuroscience</h2>
+        <p class="text-left">
+        <em>Note: in this section, "AI" will refer more specifically to supervised or semi-supervised
+        training of deep artificial neural networks; i.e. deep learning.</em> <br><br>
+        
+        Early applications of AI in systems neuroscience focused primarily on regression and 
+        classification problems: for instance, decoding neural activity patterns to predict 
+        features of the environment or the organism's behavior, or classifying behavioral or
+        environmental states from sensor data such as video or audio. Although these approaches
+        improved our predictive power, they largely treated biological neural circuits as black 
+        boxes. As deep learning developed throughout the 2010s, more sophisticated tools emerged. <br><br> 
+        
+        In particular, convolutional ANNs revolutionized behavior tracking and pose estimation, 
+        while recurrent ANNs provided new ways to model temporal dynamics in neural circuits. One
+        pivotal development came with the introduction of latent variable models, which allowed us 
+        to reliably discover low-dimensional structure in high-dimensional neural activity. 
+        These models, however, while powerful, often learn representations that are difficult to
+        interpret biologically: “there remains a gap in our understanding of how these latent 
+        spaces map to neural-level computations” 
+        <a href="https://www.nature.com/articles/s41586-023-06031-6">[1]</a>. <br><br>
+
+        AI researchers have faced similar challenges in understanding the inner workings of their
+        ANN models. Understanding the mechanisms by which a model makes decisions is crucial for
+        debugging and improving it; i.e. for developing AI safely and evolving AI capabilities. Early
+        AI interpretability work focused primarily on visualization techniques for understanding
+        what "visual features" a convolutional ANN learned after learning to successfully classify
+        objects in an image. However, a key shift occurred in the early 2020s with the emergence
+        of the field of mechanistic interpretability, which sought to move beyond beyond simply
+        visualizing learned features or attributing importance to input, and instead
+        aimed to reverse engineer the underlying computational mechanisms in ANNs.
+        </p>
+        <h2 class="text-left" style="color: #AEF6FF">Mechanistic interpretability: foundations and promise</h2>
+        <p class="text-left">
+        Mechanistic interpretability emerged as AI researchers sought to understand how large 
+        language models (LLMs) implement specific capabilities. Key techniques include activation 
+        pattern analysis, circuit discovery, and sparse autoencoder (SAE) feature extraction.
+        The field's core insight is that ANNs, despite their complexity, implement computations
+        through interpretable features and circuits that we can systematically identify and
+        understand. This mirrors a fundamental assumption in systems neuroscience: that neural 
+        circuits implement specific computations through identifiable mechanisms. Therefore, I
+        believe that the tools developed to understand artificial neural networks can provide
+        provide new ways to understand biological ones.
+        </p>
+        <h2 class="text-left" style="color: #AEF6FF">Training sparse autoencoders on neural data: a case study</h2>
+        <p class="text-left">
+        My recent work applies SAEs to neural activity in mouse visual cortex when mice are
+        presented a variety of visual stimuli. My analysis of SAEs trained on neural activity
+        ended up being very similar to the analysis done on SAEs trained on transformer network
+        linear layer activations, where learned SAE features have been found to correspond to
+        particular linguistic features. My approach here involved several key steps:
+        </p>
+        <ul>
+        <li>First, I preprocessed spike trains into time-binned spike-count vectors, creating a 
+        high-dimensional representation of neural activity patterns.</li> 
+        <li>Then I trained an SAE (with careful hyperparameter tuning -- the sparsity penalty 
+        and optimizer used can significantly impact feature interpretability) to reconstruct the 
+        time-binned spike-counts.</li>
+        <li>Lastly, I interpreted the learned SAE features.</li>
+        </ul>
+        <p class="text-left">
+        Interestingly, I found that particular SAE features correspond to particular visual stimuli 
+        properties, like full-field flashes! This work shows that SAEs can learn to reconstruct
+        neural spike activity and compress it into sparse, interpretable features that can be
+        traced back to the source spiking activity. Crucially, we can validate these features by 
+        examining their relationship to known properties of visual processing. This work suggests 
+        the SAE is discovering genuine computational features rather than arbitrary 
+        representations, and gives promise to the idea that we can use SAEs to find novel neural
+        representations!
+        </p>
+        <h2 class="text-left" style="color: #AEF6FF">Mechanistic interpretability for neural interpretability: the road ahead</h2>    
+        <p class="text-left">
+        As we stand on the cusp of a new era in neuroAI, the potential for mechanistic 
+        interpretability to advance our understanding of biological nervous systems is immense. 
+        By continuing to refine and expand our interpretability toolbox, we can unlock new insights
+        into both biological and artificial intelligence. Ultimately, the goal is not just to better
+        understand intelligent systems, but to leverage this knowledge to advance humanity through 
+        diverse applications, from developing targeted disease therapies and enhancing cognitive
+        capabilities to improving AI systems and addressing fundamental challenges in AI safety.
+        Mechanistic interpretability is our compass on this journey, guiding us toward a deeper, 
+        more integrated understanding of intelligence in all its forms.
+        </p>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap-4.4.1.js"></script>
+	</body>
+
+</html>
