@@ -104,8 +104,14 @@ address {
   line-height: inherit;
 }
 
-ol,
-ul,
+ul {
+  padding-left: 100px; /* Adds indentation */
+  margin: 0; /* Removes default browser margins if necessary */
+}
+ol {
+  padding-left: 100px; /* Adds indentation */
+  margin: 0; /* Removes default browser margins if necessary */
+}
 dl {
   margin-top: 0;
   margin-bottom: 1rem;
