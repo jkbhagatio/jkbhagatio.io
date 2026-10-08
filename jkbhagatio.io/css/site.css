@@ -157,3 +157,26 @@
 .figure-dialog-image{display:block;width:100%;height:auto;background:#fff}
 .figure-dialog-caption{font-size:14px}.figure-dialog-caption .figure-credit{font-size:11px}
 @media(max-width:780px){.figure-dialog{padding:0 16px 20px}.figure-dialog-head{gap:12px;padding-top:16px}.figure-dialog-head h2{font-size:19px}.figure-close{font-size:11px;padding:7px 9px}.publication-figure figcaption{font-size:12px}}
+
+/* Shared sun/moon control and warm-charcoal dark palette. */
+:root{color-scheme:light}
+.brand-cluster{display:flex;align-items:center;gap:1px;margin-left:-11px;flex-shrink:0}
+.theme-toggle{display:grid;place-items:center;width:44px;height:44px;padding:0;border:0;border-radius:50%;background:transparent;color:var(--accent);flex-shrink:0}
+.theme-toggle:hover{background:var(--accent-faint)}
+.theme-toggle svg{width:22px;height:22px}
+.theme-toggle .theme-moon{display:none}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#202020;--ink:#eae6df;--muted:#b5afa5;--accent:#cdb58a;--accent-faint:#cdb58a12;--line:#48453f;--subtle:#2c2a27}
+[data-theme="dark"] .theme-toggle .theme-sun{display:none}
+[data-theme="dark"] .theme-toggle .theme-moon{display:block}
+[data-theme="dark"] .portrait{background:#35312c;box-shadow:4px 6px 0 #0c0b0955}
+[data-theme="dark"] .pub-card,[data-theme="dark"] .design-card,[data-theme="dark"] .figure-dialog,[data-theme="dark"] .figure-dialog-head{background:#272624}
+[data-theme="dark"] .research-themes .theme-section:first-of-type .pub-card:first-child,[data-theme="dark"] .talks-showcase .talks-feature{background:#33302b}
+[data-theme="dark"] .talks-feature>.collection-title,[data-theme="dark"] .talks-showcase .talks-feature .project-item+.project-item{border-color:var(--line)}
+[data-theme="dark"] .oral{color:var(--bg)}
+[data-theme="dark"] .figure-expand{background:#fff;color:#75603d;border-color:#7c715d;color-scheme:light}
+[data-theme="dark"] .figure-expand:hover{border-color:var(--accent)}
+[data-theme="dark"] .figure-close{background:var(--subtle)}
+[data-theme="dark"] .video-frame,[data-theme="dark"] .hobby-panorama{background:var(--subtle)}
+[data-theme="dark"] .layout-sketch,[data-theme="dark"] .draft-bar{background:#33302b}
+[data-theme="dark"] .sketch-body i{background:#403a30;border-color:var(--line)}
+[data-theme="dark"] .figure-dialog::backdrop{background:#100f0dbb}
