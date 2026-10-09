@@ -115,6 +115,9 @@
  #interests .research-layout{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}
  #interests .diagram{order:0}
 }
+@media(max-width:780px){
+ #research .diagram,#interests .diagram{order:-1}
+}
 
 /* Matching numbered homepage headers in the context label style. */
 .about .about-heading .eyebrow.home-section-label,
@@ -180,3 +183,10 @@
 [data-theme="dark"] .layout-sketch,[data-theme="dark"] .draft-bar{background:#33302b}
 [data-theme="dark"] .sketch-body i{background:#403a30;border-color:var(--line)}
 [data-theme="dark"] .figure-dialog::backdrop{background:#100f0dbb}
+
+/* Streamlined intros and a full-width spike-sorting talk in the talks collection. */
+.themes-intro .jump-links{margin-top:0}
+.talks-intro{display:block}
+.talks-showcase .talks-feature #jclust{grid-template-columns:1fr;gap:24px}
+.talks-showcase .talks-feature #jclust .project-media{order:-1}
+.talks-showcase .talks-feature #jclust h3{margin-top:0}
