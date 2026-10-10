@@ -36,7 +36,7 @@
         edge.classList.toggle('active', connected);
       });
       question.textContent = topics[index].dataset.question;
-      detailIndex.textContent = String(index+1).padStart(2,'0') + ' / ' + topics[index].dataset.short;
+      detailIndex.textContent = topics[index].querySelector('.topic-label').textContent;
     };
     topics.forEach((topic,i) => topic.addEventListener('click', () => select(i)));
     nodes.forEach((node,i) => {

@@ -78,7 +78,7 @@
 
 /* Selected Showcase layout. */
 .talks-intro{align-items:center}.talks-intro h1{font-size:clamp(40px,4.4vw,64px);margin:0}
-.collection-title{font:30px/1.25 var(--serif);letter-spacing:-.025em}
+.collection-title{font:italic 42px/1.2 var(--serif);letter-spacing:-.025em}
 .talks-feature>.collection-title{padding-bottom:28px;margin-bottom:28px;border-bottom:1px solid #bdc8b7}
 .episode-participants{font:13px/1.8 var(--sans);color:var(--muted);margin-top:16px}
 .talks-feature .item-date{margin-top:0}
@@ -87,7 +87,7 @@
 .talks-showcase .projects-collection .project-item{padding-bottom:34px;border-bottom:1px solid var(--line)}
 .talks-showcase #nanogpt .project-image{aspect-ratio:auto}
 .talks-showcase #nanogpt .project-image img{height:auto}
-@media(max-width:780px){.collection-title{font-size:28px}.talks-feature>.collection-title{padding-bottom:22px;margin-bottom:24px}.episode-participants{font-size:14px}.talks-showcase .projects-collection .project-item{padding-bottom:26px}}
+@media(max-width:780px){.collection-title{font-size:36px}.talks-feature>.collection-title{padding-bottom:22px;margin-bottom:24px}.episode-participants{font-size:14px}.talks-showcase .projects-collection .project-item{padding-bottom:26px}}
 @media(max-width:360px){.talks-intro h1{font-size:36px}}
 
 /* Panorama: preserve the complete photo and let it recede upward on scroll. */
@@ -184,9 +184,13 @@
 [data-theme="dark"] .sketch-body i{background:#403a30;border-color:var(--line)}
 [data-theme="dark"] .figure-dialog::backdrop{background:#100f0dbb}
 
-/* Streamlined intros and a full-width spike-sorting talk in the talks collection. */
+/* Streamlined intros and consistent copy/media ordering. */
 .themes-intro .jump-links{margin-top:0}
 .talks-intro{display:block}
-.talks-showcase .talks-feature #jclust{grid-template-columns:1fr;gap:24px}
-.talks-showcase .talks-feature #jclust .project-media{order:-1}
 .talks-showcase .talks-feature #jclust h3{margin-top:0}
+.talks-showcase .projects-collection .project-media{order:0}
+
+/* Field names replace per-topic numbers in the homepage lists and diagrams. */
+.research-section .topic{grid-template-columns:1fr 18px}
+.hierarchy-node .node-label{transform:translateX(-13px)}
+.research-section .detail-index{font-size:12px;line-height:1.6}
